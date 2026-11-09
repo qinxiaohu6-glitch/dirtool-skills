@@ -72,10 +72,12 @@ curl -s https://dirtool.com/api/tools \
   | jq -r '.tools[] | "\(.name_en)\t\(.url)\t\(.category)\tpaid=\(.is_paid)"'
 ```
 
-### One listing
+### One submitted listing
+
+Curated catalogue products such as Bolt live in `/llms.txt` and on `/tools/{slug}` pages. They are **not** in this API — `/api/tools/bolt` returns `404`. Pick a slug from `/api/tools` instead; a current example is `zipzax`:
 
 ```bash
-curl -s https://dirtool.com/api/tools/bolt
+curl -s https://dirtool.com/api/tools/zipzax
 ```
 
 ### Domain Rating (DR4)

@@ -39,7 +39,7 @@ There is **no top-level `votes` field** — the week's count arrives inside the 
 
 | Status | Body | Meaning |
 |---|---|---|
-| 200 | `{ ok:true, tool, votes }` | Live. |
+| 200 | `{ ok:true, tool }` | Live. There is no top-level `votes` field. |
 | 404 | `{ ok:false, reason:"not_found" }` | Never existed, still pending, or rejected — deliberately indistinguishable. |
 | 410 | `{ ok:false, reason:"removed" }` | Was live, pulled by the operator. |
 
